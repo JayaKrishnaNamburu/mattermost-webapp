@@ -12,6 +12,7 @@ import {resetCreatePostRequest, resetHistoryIndex} from 'mattermost-redux/action
 import {Preferences, Posts} from 'mattermost-redux/constants';
 
 import {Constants, StoragePrefixes} from 'utils/constants.jsx';
+import {showEmojiPickerForLastMessage} from 'actions/post_actions.jsx';
 import {getCurrentLocale} from 'selectors/i18n';
 
 import {
@@ -107,6 +108,7 @@ function makeMapDispatchToProps() {
             onMoveHistoryIndexForward,
             onEditLatestPost,
             resetCreatePostRequest,
+            showEmojiPickerForLastMessage,
         }, dispatch);
     };
 }
